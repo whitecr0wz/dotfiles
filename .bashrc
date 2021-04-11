@@ -2,7 +2,44 @@ export PS1="[\u@\h \W] % \[$(tput sgr0)\]"
 
 [[ $TERM != "screen" ]] && exec tmux
 tmux set-option -a status-style bg=colour0;
-export PATH=/usr/sbin:$PATH
-export PATH=/sbin:$PATH
 
-# tmux set-option status off
+export PATH=/usr/sbin:/sbin:$PATH
+
+alias apt="sudo apt"
+alias nmap="sudo nmap"
+alias nikto="sudo nikto"
+alias python="sudo python"
+alias python3="sudo python3"
+alias gobuster="sudo gobuster"
+alias dirsearch="sudo dirsearch"
+alias burpsuite="sudo burpsuite"
+alias wireshark="sudo wireshark"
+alias msfconsole="sudo msfconsole"
+alias msfvenom="sudo msfvenom"
+alias ls="sudo ls"
+alias cp="sudo cp"
+alias mv="sudo mv"
+alias cat="sudo cat"
+alias nano="sudo nano -x"
+alias echo="sudo echo"
+alias locate="sudo locate"
+alias chmod="sudo chmod"
+alias chown="sudo chown"
+alias pip="sudo pip"
+alias showmount="sudo showmount"
+alias make="sudo make"
+alias john="sudo /opt/john/run/john"
+alias service="sudo service"
+alias ssh="sudo ssh"
+alias kill="sudo kill"
+alias su="sudo su"
+alias git="sudo git"
+alias shutdown="sudo shutdown"
+alias openvpn="sudo openvpn"
+alias ifconfig="sudo ifconfig"
+alias ln="sudo ln"
+alias rm="sudo rm"
+alias tcpdump="sudo tcpdump"
+alias configure="sudo ./configure"
+
+alias fortune="fortune /opt/stoic-fortune/stoic-quotes | cowsay"
