@@ -1,11 +1,12 @@
 export PS1="[\u@\h \W] % \[$(tput sgr0)\]"
 
-[[ $TERM != "screen" ]] && exec tmux
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux 1> /dev/null
+fi
+
 tmux set-option -a status-style bg=colour0;
 
-export PATH=/usr/sbin:/sbin:$PATH
-
-alias apt="sudo apt"
+alias pacman="sudo pacman"
 alias nmap="sudo nmap"
 alias nikto="sudo nikto"
 alias python="sudo python"
@@ -34,12 +35,15 @@ alias ssh="sudo ssh"
 alias kill="sudo kill"
 alias su="sudo su"
 alias git="sudo git"
-alias shutdown="sudo shutdown"
 alias openvpn="sudo openvpn"
 alias ifconfig="sudo ifconfig"
 alias ln="sudo ln"
 alias rm="sudo rm"
 alias tcpdump="sudo tcpdump"
 alias configure="sudo ./configure"
+alias wget="sudo wget"
+alias poweroff="sudo poweroff"
+alias reboot="sudo reboot"
 
 alias fortune="fortune /opt/stoic-fortune/stoic-quotes | cowsay"
+clear
